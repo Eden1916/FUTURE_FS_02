@@ -1,0 +1,15 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.new       { background: #dbeafe; color: #1d4ed8; }
+.contacted { background: #fef9c3; color: #854d0e; }
+.converted { background: #dcfce7; color: #15803d; }
+.lost      { background: #fee2e2; color: #b91c1c; }

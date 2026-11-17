@@ -1,0 +1,334 @@
+.page {
+  max-width: 1000px;
+}
+
+.loading,
+.error {
+  padding: 40px;
+  text-align: center;
+  color: var(--gray-500);
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--gray-500);
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* Lead card */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.leadName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  line-height: 1.3;
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.editBtn {
+  font-size: 13px;
+  color: var(--primary);
+  background: var(--primary-light);
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.editBtn:hover { background: #e0e7ff; }
+
+.deleteBtn {
+  font-size: 13px;
+  color: var(--danger);
+  background: var(--danger-bg);
+  border: none;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.deleteBtn:hover { background: #fecaca; }
+
+/* Info list */
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.infoRow {
+  display: flex;
+  gap: 8px;
+}
+
+.infoRow dt {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  letter-spacing: 0.05em;
+  min-width: 80px;
+  padding-top: 1px;
+}
+
+.infoRow dd {
+  font-size: 14px;
+  color: var(--gray-700);
+  word-break: break-word;
+}
+
+.capitalize { text-transform: capitalize; }
+
+/* Status */
+.statusSection {
+  border-top: 1px solid var(--gray-100);
+  padding-top: 16px;
+}
+
+.statusLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.statusSelect {
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  font-size: 13px;
+  background: #fff;
+  color: var(--gray-700);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.statusSelect:focus { border-color: var(--primary); }
+.statusSelect:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Notes */
+.notesSection {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notesHeading {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+/* Note form */
+.noteForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.textarea {
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  color: var(--gray-800);
+  background: #fff;
+}
+
+.textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.noteFormRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.followUpWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.followUpLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+.dateInput {
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 7px 10px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.dateInput:focus { border-color: var(--primary); }
+
+.addNoteBtn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.addNoteBtn:hover:not(:disabled) { background: var(--primary-dark); }
+.addNoteBtn:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.noteError {
+  font-size: 12px;
+  color: var(--danger);
+}
+
+/* Notes list */
+.notesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.noNotes {
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 13px;
+  padding: 20px;
+  font-style: italic;
+}
+
+.noteCard {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  background: #fff;
+}
+
+.noteHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.noteAuthor {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.noteDate {
+  font-size: 12px;
+  color: var(--gray-400);
+  flex: 1;
+}
+
+.noteDelete {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.noteDelete:hover { color: var(--danger); }
+
+.noteContent {
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.followUpTag {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--warning);
+  background: var(--warning-bg);
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.mutationError {
+  margin-top: 10px;
+  color: var(--danger);
+  font-size: 13px;
+}
